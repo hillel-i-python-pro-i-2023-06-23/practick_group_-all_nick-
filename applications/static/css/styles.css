@@ -1,0 +1,29 @@
+body {
+    font-family: Ubuntu Light, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lavenderblush;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+label, input, button {
+    display: block;
+    margin: 10px auto;
+}
