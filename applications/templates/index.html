@@ -7,6 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Угадай слово</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script>
+        function addParticipantInputs() {
+            const numPlayersInput = document.getElementById('num_players');
+            const numPlayers = parseInt(numPlayersInput.value);
+
+            const container = document.getElementById('participants-container');
+            container.innerHTML = ''; // Очищаем контейнер
+
+            for (let i = 0; i < numPlayers; i++) {
+                const participantInput = document.createElement('div');
+                participantInput.className = 'participant-input';
+                participantInput.innerHTML = `
+                    <label for="participant">Имя участника ${i + 1}:</label>
+                    <input type="text" name="participant" required>
+                `;
+                container.appendChild(participantInput);
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -15,6 +34,8 @@
             {% csrf_token %}
             <label for="num_players">Количество участников</label>
             <input type="number" name="num_players" id="num_players" required>
+            <button type="button" onclick="addParticipantInputs()">Добавить участников</button>
+            <div id="participants-container"></div>
             <button type="submit">Начать игру!</button>
         </form>
     </div>
