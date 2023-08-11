@@ -8,8 +8,12 @@ from django.shortcuts import render
 def index(request):
     users_name = []
     if request.method == "POST":
-        name = request.POST.get("participant")
-        users_name.append("name")
-        return render(request, 'index.html', f'{name}')
+        names = request.POST.getlist("participant")
+
+        for name in names:
+            users_name.append(name)
+
+        # Добавили в index.html вывод списка имен игроков:
+        return render(request, 'index.html', {"names": names})
     else:
         return render(request, "index.html")

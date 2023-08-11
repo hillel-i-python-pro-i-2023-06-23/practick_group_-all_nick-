@@ -4,22 +4,22 @@ black==23.7.0
 autopep8==2.0.2
 
 # Проверка стиля кода
-flake8==6.0.0
+flake8==6.1.0
 
 # Анализ типов кода
-mypy==1.4.1
+mypy==1.5.0
 
 # Дополнительные хуки
 pre-commit==3.3.3
 pre-commit-hooks==v4.4.0
 setup-cfg-fmt==2.4.0
 reorder-python-imports==3.10.0
-add-trailing-comma==3.0.0
-pyupgrade==3.9.0
+add-trailing-comma==3.0.1
+pyupgrade==3.10.1
 
 
 #optional
-Django==4.2.3
-Faker==19.2.0
+Django==4.2.4
+Faker==19.3.0
 faker-food==0.1.0
 

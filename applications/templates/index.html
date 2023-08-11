@@ -30,6 +30,8 @@
 <body>
     <div class="container">
         <h1>Угадай слово</h1>
+        <p>{{names}}</p>
+
         <form method="post">
             {% csrf_token %}
             <label for="num_players">Количество участников</label>
